@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import ListItem from './ListItem';
 import ListHeader from './ListHeader';
+import SearchField from './SearchField';
 
 class MasterList extends Component {
     renderLoading() {
@@ -21,6 +22,7 @@ class MasterList extends Component {
         return (
             <View style={styles.masterList}>
                 <ListHeader data={data} />
+                <SearchField/>
                 <FlatList
                     style={styles.list}
                     data={data}

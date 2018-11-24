@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     listHeader: {
         justifyContent: 'center',
         alignItems: 'center',
-        height: 75,
+        height: 65,
         backgroundColor: '#425160'
     },
     headerText: {
