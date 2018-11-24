@@ -42,7 +42,8 @@ class MasterList extends Component {
 
 const styles = StyleSheet.create({
     masterList: {
-        width: '100%'
+        width: '100%',
+        height: '100%'
     },
     list: {},
     seperator: {
