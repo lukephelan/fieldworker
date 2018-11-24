@@ -16,18 +16,25 @@ class ListHeader extends Component {
     render() {
         this._countJobs()
         return (
-            <View><Text style={styles.listHeader}>Jobs ({this.state.itemCount})</Text></View>
+            <View style={styles.listHeader}>
+                <Text style={styles.headerText}>Jobs ({this.state.itemCount})</Text>
+            </View>
         );
     }
 }
 
 const styles = StyleSheet.create({
     listHeader: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 75,
+        marginTop: 50,
+        backgroundColor: '#425160'
+    },
+    headerText: {
         textAlign: 'center',
         color: 'white',
         fontSize: 20,
-        height: 40,
-        backgroundColor: '#425160'
     }
 })
 
