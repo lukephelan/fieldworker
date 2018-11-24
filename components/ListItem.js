@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
 class ListItem extends Component {
     renderLoading() {
@@ -16,8 +16,15 @@ class ListItem extends Component {
             <View style={styles.listTile}>
                 <View style={[styles.priorityIndicatorPanel, data.Priority === 1 && styles.highPriorityIndicator, data.Priority === 2 && styles.medPriorityIndicator]} />
                 <View style={styles.listItemTile} >
-                    <Text style={styles.listItemAsset}>{data.Asset}</Text>
+                    <Text style={styles.listItemAsset}>{data.Asset.toUpperCase()}</Text>
                     <Text style={styles.listItemStatus}>{data.Status}</Text>
+                    <Text style={styles.listItemStatus}>{data.Turnaround}</Text>
+                    <Text style={styles.listItemDescription}>{data.Description}</Text>
+                    <View style={styles.dateRaisedContainer}>
+                        <Image style={styles.calendarImage} source={require('../assets/calendar.png')} />
+                        <Text style={styles.listItemRaisedDate}>{data.DateRaised}</Text>
+                    </View>
+                    <Text style={styles.listItemDescription}>{data.JobNumber}</Text>
                 </View>
             </View>
         )
@@ -42,22 +49,30 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         flex: 1,
         flexDirection: 'column',
-        height: 100
+        paddingBottom: 10,
+        paddingLeft: 15
     },
     listItemAsset: {
         borderBottomColor: 'black',
-        paddingLeft: 10,
+        // paddingLeft: 10,
         paddingTop: 10,
         fontSize: 20,
+        fontWeight: 'bold',
         backgroundColor: '#FFFFFF'
     },
     listItemStatus: {
         borderBottomColor: 'black',
-        paddingRight: 10,
+        paddingRight: 15,
         paddingTop: 10,
         fontSize: 20,
         backgroundColor: '#FFFFFF',
         textAlign: 'right'
+    },
+    listItemDescription: {
+        borderBottomColor: 'black',
+        paddingTop: 10,
+        fontSize: 20,
+        backgroundColor: '#FFFFFF'
     },
     highPriorityIndicator: {
         backgroundColor: 'red',
@@ -68,6 +83,22 @@ const styles = StyleSheet.create({
     priorityIndicatorPanel: {
         backgroundColor: 'green',
         width: 7.5
+    },
+    listItemRaisedDate: {
+        borderBottomColor: 'black',
+        paddingTop: 10,
+        paddingLeft: 5,
+        fontSize: 20,
+        backgroundColor: '#FFFFFF'
+    },
+    dateRaisedContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'baseline'
+    },
+    calendarImage: {
+        height: 20,
+        width: 20
     }
 
 })

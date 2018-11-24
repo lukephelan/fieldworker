@@ -6,7 +6,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 3,
       "Description": "Damaged filter",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115691",
       "Turnaround": "1 Week",
       "Status": "Ready"
@@ -18,10 +18,10 @@ let mockData = [
       "Longitude": "",
       "Priority": 2,
       "Description": "Broken articulator",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115651",
       "Turnaround": "3 Days",
-      "Status": "Ready"
+      "Status": "On Hold"
     },
     {
       "Asset": "HV Substation",
@@ -30,10 +30,10 @@ let mockData = [
       "Longitude": "",
       "Priority": 1,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115611",
       "Turnaround": "24 HOURS",
-      "Status": "Ready"
+      "Status": "On Hold"
     },
     {
       "Asset": "Crushed Rock Conveyor CR-3",
@@ -42,7 +42,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 3,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115600",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -54,7 +54,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 1,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115599",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -66,7 +66,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 2,
       "Description": "Broken damper",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115089",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -78,7 +78,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 1,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115692",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -90,7 +90,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 1,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115700",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -102,7 +102,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 3,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115816",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
@@ -114,7 +114,7 @@ let mockData = [
       "Longitude": "",
       "Priority": 3,
       "Description": "Cooling Problems",
-      "DateRaised": "",
+      "DateRaised": "24 November, 2018",
       "JobNumber": "10115911",
       "Turnaround": "24 HOURS",
       "Status": "Ready"
