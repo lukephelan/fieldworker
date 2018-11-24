@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import ListItem from './ListItem';
+import ListHeader from './ListHeader';
 
 class MasterList extends Component {
     renderLoading() {
@@ -18,12 +19,15 @@ class MasterList extends Component {
     masterList() {
         const { data } = this.props;
         return (
-            <FlatList
-                style={styles.list}
-                data={data}
-                ItemSeparatorComponent={this.renderSeparator}
-                keyExtractor={this._keyExtractor}
-                renderItem={({ item }) => <ListItem data={item} />} />
+            <View style={styles.masterList}>
+                <ListHeader data={data} />
+                <FlatList
+                    style={styles.list}
+                    data={data}
+                    ItemSeparatorComponent={this.renderSeparator}
+                    keyExtractor={this._keyExtractor}
+                    renderItem={({ item }) => <ListItem data={item} />} />
+            </View>
         )
     }
 
@@ -37,14 +41,13 @@ class MasterList extends Component {
 }
 
 const styles = StyleSheet.create({
-    list: {
-        width: '100%',
-        flex: 2
+    masterList: {
+        width: '100%'
     },
+    list: {},
     seperator: {
         height: 1,
-        width: "86%",
-        backgroundColor: "#CED0CE",
+        backgroundColor: '#A0BDD8',
         marginLeft: 5,
         marginRight: 5
     }

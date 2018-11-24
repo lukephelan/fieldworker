@@ -10,7 +10,11 @@ class ListItem extends Component {
 
     listItem() {
         const { data } = this.props;
-        return <Text style={styles.listItem}>{data.CustomerName}</Text>
+        return (
+            <View style={styles.listTile}>
+                <Text style={styles.listItem}>{data.CustomerName}</Text>
+            </View>
+        )
     }
 
     render() {
@@ -23,6 +27,9 @@ class ListItem extends Component {
 }
 
 const styles = StyleSheet.create({
+    listTile: {
+        justifyContent: 'flex-start'
+    },
     listItem: {
         borderBottomColor: 'black',
         alignItems: 'center',
