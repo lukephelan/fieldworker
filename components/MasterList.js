@@ -8,7 +8,7 @@ class MasterList extends Component {
         return <View><Text>Loading...</Text></View>;
     }
 
-    _keyExtractor = (item, index) => item.CustomerID
+    _keyExtractor = (item, index) => item.JobNumber
 
     renderSeparator = () => {
         return (

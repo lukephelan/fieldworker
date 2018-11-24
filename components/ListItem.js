@@ -6,13 +6,19 @@ class ListItem extends Component {
         return <View><Text>Loading...</Text></View>;
     }
 
-    _keyExtractor = (item, index) => item.CustomerID
+    _setPriorityHighlight() {
+
+    }
 
     listItem() {
         const { data } = this.props;
         return (
             <View style={styles.listTile}>
-                <Text style={styles.listItem}>{data.CustomerName}</Text>
+                <View style={[styles.priorityIndicatorPanel, data.Priority === 1 && styles.highPriorityIndicator, data.Priority === 2 && styles.medPriorityIndicator]} />
+                <View style={styles.listItemTile} >
+                    <Text style={styles.listItemAsset}>{data.Asset}</Text>
+                    <Text style={styles.listItemStatus}>{data.Status}</Text>
+                </View>
             </View>
         )
     }
@@ -28,18 +34,42 @@ class ListItem extends Component {
 
 const styles = StyleSheet.create({
     listTile: {
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
+        flex: 1,
+        flexDirection: 'row'
     },
-    listItem: {
+    listItemTile: {
+        justifyContent: 'flex-start',
+        flex: 1,
+        flexDirection: 'column',
+        height: 100
+    },
+    listItemAsset: {
         borderBottomColor: 'black',
-        alignItems: 'center',
         paddingLeft: 10,
         paddingTop: 10,
-        height: 50,
+        fontSize: 20,
+        backgroundColor: '#FFFFFF'
+    },
+    listItemStatus: {
+        borderBottomColor: 'black',
+        paddingRight: 10,
+        paddingTop: 10,
         fontSize: 20,
         backgroundColor: '#FFFFFF',
-        height: 100
+        textAlign: 'right'
+    },
+    highPriorityIndicator: {
+        backgroundColor: 'red',
+    },
+    medPriorityIndicator: {
+        backgroundColor: 'orange',
+    },
+    priorityIndicatorPanel: {
+        backgroundColor: 'green',
+        width: 7.5
     }
+
 })
 
 export default ListItem;
