@@ -7,14 +7,14 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      customers: MockData
+      operations: MockData
     }
   }
 
   render() {
     return (
       <View style={styles.container}>
-        <MasterList data={this.state.customers} />
+        <MasterList data={this.state.operations} />
       </View>
     );
   }
